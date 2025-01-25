@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     protected float jumpForce = 5;
 
+    [SerializeField]
+    protected float dashSpeed = 10;
+
     protected Rigidbody2D rb;
 
 
@@ -46,13 +49,21 @@ public class PlayerController : MonoBehaviour
         );
     }
 
-    // public virtual bool IsGroundDetected()
-    // {
-    //     var groundLayer = ;
-    //     return Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, groundLayer);
-    // }
+    public virtual void OnSprint(InputValue value) {
+        if(!value.isPressed) {
+            return;
+        }
 
-public virtual bool IsGroundDetected() =>
+        var xInput = Input.GetAxisRaw("Horizontal");
+        var yInput = Input.GetAxisRaw("Vertical");
+        
+        rb.linearVelocity = new Vector2(
+            rb.linearVelocityX + xInput * dashSpeed,
+            rb.linearVelocityY + yInput * dashSpeed
+        );
+    }
+
+    public virtual bool IsGroundDetected() =>
         Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, groundLayer);
 
     private void OnDrawGizmos() {
