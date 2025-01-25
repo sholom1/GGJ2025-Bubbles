@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: Player1Component
   m_EditorClassIdentifier: 
   playerType: 1
-  MovementSpeed: 5
+  MovementSpeed: 10
   JumpForce: 5
   JumpFrequency: 1
   DashSpeed: 10
   DashCooldown: 2
   Gravity: 9.8
-  PlayerSprite: {fileID: 0}

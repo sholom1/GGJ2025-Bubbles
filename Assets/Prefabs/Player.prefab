@@ -186,7 +186,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &8939170092722960000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +232,7 @@ MonoBehaviour:
   renderer: {fileID: 2001226435017034775}
   playerInput: {fileID: 8939170092722960000}
   groundCheck: {fileID: 1200205705440526519}
-  groundCheckDistance: 0.5
+  groundCheckDistance: 0.15
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
