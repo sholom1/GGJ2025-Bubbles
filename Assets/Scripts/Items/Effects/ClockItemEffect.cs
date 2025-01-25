@@ -6,22 +6,14 @@ public class ClockItemEffect : MonoBehaviour, IItemEffect
     [SerializeField] private float timeChangeAmount = 5f;  // Amount of time to add/subtract
     
     private Item item;
-    private GameManager gameManager;  // Reference to your game manager for timer control
 
     private void Awake()
     {
         item = GetComponent<Item>();
-        gameManager = Object.FindFirstObjectByType<GameManager>();
 
         if (item == null)
         {
             Debug.LogError("ClockItemEffect requires an Item component!");
-            return;
-        }
-
-        if (gameManager == null)
-        {
-            Debug.LogError("Could not find GameManager in the scene!");
             return;
         }
 
@@ -35,7 +27,7 @@ public class ClockItemEffect : MonoBehaviour, IItemEffect
         // If bubble collects, add time. If urchin collects, subtract time
         float timeModifier = collector.CompareTag("Bubble") ? timeChangeAmount : -timeChangeAmount;
         
-        // Modify the game timer
-        gameManager.ModifyRoundTime(timeModifier);
+        // Modify the game timer using the singleton instance
+        GameManager.instance.ModifyRoundTime(timeModifier);
     }
 }

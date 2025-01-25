@@ -22,7 +22,6 @@ public class Item : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        Debug.Log($"Item Awake - GameObject: {gameObject.name}, Has SpriteRenderer: {spriteRenderer != null}");
         InitializeItem();
     }
 
@@ -36,23 +35,7 @@ public class Item : MonoBehaviour
 
     private void InitializeItem()
     {
-        if (itemData == null)
-        {
-            Debug.LogError($"ItemData not assigned to item: {gameObject.name}");
-            return;
-        }
-
-        Debug.Log($"Initializing item {gameObject.name} - ItemData: {itemData.name}, Sprite: {itemData.itemSprite != null}");
-
-        if (spriteRenderer != null && itemData.itemSprite != null)
-        {
-            spriteRenderer.sprite = itemData.itemSprite;
-            Debug.Log($"Sprite assigned to {gameObject.name}");
-        }
-        else
-        {
-            Debug.LogError($"Failed to set sprite - SpriteRenderer: {spriteRenderer != null}, ItemData Sprite: {itemData.itemSprite != null}");
-        }
+        spriteRenderer.sprite = itemData.itemSprite;
     }
 
     private IEnumerator LifetimeRoutine()
@@ -95,8 +78,8 @@ public class Item : MonoBehaviour
     {
         if (isFlickering) return; // Can't pick up while flickering
         
-        // Find the other player (target)
-        GameObject target = FindOtherPlayer(collector.gameObject);
+        // Find the other player using GameManager
+        GameObject target = GameManager.instance.GetOtherPlayer(collector.gameObject);
         if (target == null) return;
 
         // Invoke the appropriate event
@@ -113,12 +96,6 @@ public class Item : MonoBehaviour
         {
             DestroyItem();
         }
-    }
-
-    private GameObject FindOtherPlayer(GameObject collector)
-    {
-        string targetTag = collector.CompareTag("Bubble") ? "Urchin" : "Bubble";
-        return GameObject.FindGameObjectWithTag(targetTag);
     }
 
     public void DestroyItem()
