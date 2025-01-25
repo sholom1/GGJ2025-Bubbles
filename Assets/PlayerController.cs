@@ -37,6 +37,10 @@ public class PlayerController : MonoBehaviour
     private PlayerType _type = PlayerType.Unassigned;
 
     private PlayerComponentScriptableObject _playerComponent;
+    private int currentJumpCount = 0;
+    private float dashDurationTimer;
+    private float dashDuration;
+    private float lastDashTime;
 
 
     private Vector2 _inputValues;
@@ -52,6 +56,7 @@ public class PlayerController : MonoBehaviour
     }
     
     private void FixedUpdate() {
+        dashDurationTimer -= Time.deltaTime;
         PlayerMovement();
     }
 
@@ -75,6 +80,7 @@ public class PlayerController : MonoBehaviour
         dashSpeed = _playerComponent.DashSpeed;
         dashCooldown = _playerComponent.DashCooldown;
         gravity = _playerComponent.Gravity;
+        dashDuration = _playerComponent.DashDuration;
         
         if (_type != PlayerType.Unassigned)
         {
@@ -97,6 +103,9 @@ public class PlayerController : MonoBehaviour
     }
 
     private void PlayerMovement() {
+        if (IsDashing()) {
+            return;
+        }
         rb.linearVelocity = new Vector2(
             _inputValues.x * moveSpeed,
             rb.linearVelocityY
@@ -110,16 +119,17 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        var xInput = Input.GetAxisRaw("Horizontal");
-        var yInput = Input.GetAxisRaw("Vertical");
+        if(Time.time - lastDashTime < dashCooldown) {
+            return;
+        }
 
+        dashDurationTimer = dashDuration;
+        lastDashTime = Time.time;
         rb.linearVelocity = new Vector2(
-            rb.linearVelocityX + xInput * dashSpeed,
-            rb.linearVelocityY + yInput * dashSpeed
+            _inputValues.x * dashSpeed,
+            rb.linearVelocityY
         );
     }
-
-    private int currentJumpCount = 0;
     
     private bool CanJump() {
         bool groundDetected = IsGroundDetected();
@@ -148,12 +158,14 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocityX,
             jumpForce
         );
-        
+
         currentJumpCount++;
     }
 
     public virtual bool IsGroundDetected() =>
         Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, groundLayer);
+
+    bool IsDashing() => dashDurationTimer > 0;
 
     private void OnDrawGizmos()
     {

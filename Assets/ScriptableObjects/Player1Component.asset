@@ -16,6 +16,7 @@ MonoBehaviour:
   MovementSpeed: 10
   JumpForce: 5
   JumpFrequency: 1
-  DashSpeed: 10
+  DashSpeed: 20
   DashCooldown: 2
+  DashDuration: 0.2
   Gravity: 9.8
