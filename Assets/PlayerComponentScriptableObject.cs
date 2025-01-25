@@ -23,6 +23,7 @@ public class PlayerComponentScriptableObject : ScriptableObject
     
     public float DashSpeed = 10f;
     public float DashCooldown = 2f;
+    public float DashDuration = 0.2f;
     
     public float Gravity = 9.81f;
 }
