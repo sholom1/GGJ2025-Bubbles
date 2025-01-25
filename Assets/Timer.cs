@@ -15,11 +15,12 @@ public class Timer : MonoBehaviour
     private float pulseThreshold;
     public UnityEvent OnEnd;
     private float timeRemaining;
+
     private void Start()
     {
         timeRemaining = duration;
     }
-    // Update is called once per frame
+
     void Update()
     {
         if (!animator.GetBool("Pulse"))
@@ -38,8 +39,20 @@ public class Timer : MonoBehaviour
             enabled = false;
         }
     }
+
     public void TickTimerAnim(AnimationEvent animationEvent)
     {
         timeRemaining = Mathf.Max(0, timeRemaining - 1);
+    }
+
+    public void ModifyTime(float amount)
+    {
+        timeRemaining = Mathf.Clamp(timeRemaining + amount, 0f, duration * 2f);
+        
+        // If we added time and we're above the pulse threshold, stop pulsing
+        if (timeRemaining > pulseThreshold)
+        {
+            animator.SetBool("Pulse", false);
+        }
     }
 }
