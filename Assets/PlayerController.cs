@@ -51,9 +51,18 @@ public class PlayerController : MonoBehaviour
         GameManager.instance.RegisterPlayer(this);
     }
     
-
     private void FixedUpdate() {
         PlayerMovement();
+    }
+
+    public void SetPlayerType(PlayerType type)
+    {
+        if (_type != PlayerType.Unassigned)
+        {
+            Debug.LogError($"Player is already assigned to {_type}");
+            return;
+        }
+        _type = type;
     }
 
     public void SetPlayerComponent(PlayerComponentScriptableObject playerComponent)
@@ -125,6 +134,7 @@ public class PlayerController : MonoBehaviour
 
         return false;
     }
+
     void OnJump(InputValue value) 
     {
         if (value.isPressed && CanJump())
@@ -141,6 +151,7 @@ public class PlayerController : MonoBehaviour
         
         currentJumpCount++;
     }
+
     public virtual bool IsGroundDetected() =>
         Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, groundLayer);
 

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d34567890abcdef1234567890abcdef, type: 3}
   m_Name: Clock_ItemData
   m_EditorClassIdentifier: 
-  itemType: 0
+  itemType: 1
   itemName: 
   description: 
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 7124bd4b9186340e8943829007f15ffc, type: 3}
   effectDuration: 3
   destroyOnPickup: 1

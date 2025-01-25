@@ -77,19 +77,18 @@ public class Item : MonoBehaviour
     private void HandlePickup(PlayerController collector)
     {
         if (isFlickering) return; // Can't pick up while flickering
-        
-        // Find the other player using GameManager
-        GameObject target = GameManager.instance.GetOtherPlayer(collector.gameObject);
+
+        PlayerController target = GameManager.instance.GetOtherPlayer(collector);
         if (target == null) return;
 
         // Invoke the appropriate event
         if (collector.CompareTag("Bubble"))
         {
-            onPickupByBubble?.Invoke(collector.gameObject, target);
+            onPickupByBubble?.Invoke(collector.gameObject, target.gameObject);
         }
         else
         {
-            onPickupByUrchin?.Invoke(collector.gameObject, target);
+            onPickupByUrchin?.Invoke(collector.gameObject, target.gameObject);
         }
 
         if (itemData.destroyOnPickup)

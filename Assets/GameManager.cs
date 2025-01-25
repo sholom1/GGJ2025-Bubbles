@@ -36,8 +36,7 @@ public class GameManager : MonoBehaviour
         players.Add(player);
         if (players.Count == 1)
         {
-            //Player is bubble
-            // player.SetPlayerType(PlayerType.Bubble);
+            player.SetPlayerType(PlayerType.Bubble);
             playerComponents[0].PlayerSprite = playerSprites[0];
             player.SetPlayerComponent(playerComponents.Count > 0 ? playerComponents[0] : dummyPlayerComponent);
             player.name = "Player 1";
@@ -45,8 +44,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            //Player is urchin
-            // player.SetPlayerType(PlayerType.Urchin);
+            player.SetPlayerType(PlayerType.Urchin);
             playerComponents[1].PlayerSprite = playerSprites[1];
             player.SetPlayerComponent(playerComponents.Count > 1 ? playerComponents[1] : dummyPlayerComponent);
             player.name = "Player 2";
@@ -60,15 +58,6 @@ public class GameManager : MonoBehaviour
     public PlayerController GetOtherPlayer(PlayerController self)
     {
         return players.Find(value => value != self);
-    }
-
-    public GameObject GetOtherPlayer(GameObject playerObject)
-    {
-        PlayerController playerController = playerObject.GetComponent<PlayerController>();
-        if (playerController == null) return null;
-        
-        PlayerController otherPlayer = GetOtherPlayer(playerController);
-        return otherPlayer?.gameObject;
     }
 
     public void StartGame()
