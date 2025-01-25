@@ -196,3 +196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04807f38314e14501b223903451eedce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bubble: {fileID: 21300000, guid: f9422264535fb4a9aae2c21422784e04, type: 3}
+  urchin: {fileID: 21300000, guid: a63302a83758f435089d69315f8a918e, type: 3}
+  renderer: {fileID: 2001226435017034775}
