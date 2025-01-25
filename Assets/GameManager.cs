@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class GameManager : MonoBehaviour
     private GameObject joinScreen;
     [SerializeField]
     private Button startButton;
+    [SerializeField]
+    private Timer timer;
     public static GameManager instance;
     private void Awake()
     {
@@ -48,6 +51,12 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         Debug.Log("Game Start");
+        timer.gameObject.SetActive(true);
+        timer.OnEnd.AddListener(GameOver);
         Destroy(joinScreen);
+    }
+    public void GameOver()
+    {
+        SceneManager.LoadScene(0);
     }
 }
