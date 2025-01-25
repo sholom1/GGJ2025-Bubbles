@@ -327,6 +327,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -2059,7 +2072,85 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      laptopkeyboard_0: 5945806157132763397
+      laptopkeyboard_1: -166262392888914382
+      laptopkeyboard_10: 4526605997519003866
+      laptopkeyboard_11: -8719023110748027147
+      laptopkeyboard_12: -5882911667875041463
+      laptopkeyboard_13: 5176314707995304688
+      laptopkeyboard_14: -1451541987895902490
+      laptopkeyboard_15: 5020461773701049187
+      laptopkeyboard_16: 6332364399929039822
+      laptopkeyboard_17: -6194132225073268049
+      laptopkeyboard_18: 6240991148459813452
+      laptopkeyboard_19: 3968691657827817808
+      laptopkeyboard_2: -2181249850474189527
+      laptopkeyboard_20: 965338937852976962
+      laptopkeyboard_21: 601791230420434087
+      laptopkeyboard_22: 6823510024348555756
+      laptopkeyboard_23: -8740418968150650571
+      laptopkeyboard_24: 2666268726304306056
+      laptopkeyboard_25: -2305407089453184502
+      laptopkeyboard_26: -9023110927288227733
+      laptopkeyboard_27: 6038104359079437474
+      laptopkeyboard_28: -3249687342077305593
+      laptopkeyboard_29: 762659948728452223
+      laptopkeyboard_3: -5627905234422502024
+      laptopkeyboard_30: 6370037562495213342
+      laptopkeyboard_31: -3902132786866834903
+      laptopkeyboard_32: -510688700683251887
+      laptopkeyboard_33: -5939444423459032055
+      laptopkeyboard_34: 3775892701786486608
+      laptopkeyboard_35: -3262376288470849818
+      laptopkeyboard_36: 819974574364521175
+      laptopkeyboard_37: 2964750715574192064
+      laptopkeyboard_38: 4910981291682788440
+      laptopkeyboard_39: -1561166184414955676
+      laptopkeyboard_4: -681609727281123584
+      laptopkeyboard_40: 4805126996867920452
+      laptopkeyboard_41: -2180485382184463900
+      laptopkeyboard_42: -2687314722257153970
+      laptopkeyboard_43: 5865186556628993157
+      laptopkeyboard_44: -8468551733250976781
+      laptopkeyboard_45: -2735654246145690169
+      laptopkeyboard_46: 3009156863307184217
+      laptopkeyboard_47: 375742250256101064
+      laptopkeyboard_48: -8211659204567533674
+      laptopkeyboard_49: -7629108249960560271
+      laptopkeyboard_5: -4407757333580754405
+      laptopkeyboard_50: -7102479662544133596
+      laptopkeyboard_51: 3066952836859219933
+      laptopkeyboard_52: 1352501100660522623
+      laptopkeyboard_53: 2623859919143071683
+      laptopkeyboard_54: -1158884282075057474
+      laptopkeyboard_55: 4074720973317444761
+      laptopkeyboard_56: -1874782376509164665
+      laptopkeyboard_57: -7354313386465947430
+      laptopkeyboard_58: 1691672782443791452
+      laptopkeyboard_59: 6613553795681116067
+      laptopkeyboard_6: 3931998220294664605
+      laptopkeyboard_60: 7308055058194885357
+      laptopkeyboard_61: 1640690602888316060
+      laptopkeyboard_62: 2547466414026209737
+      laptopkeyboard_63: -724569839411959373
+      laptopkeyboard_64: 1976185900248888194
+      laptopkeyboard_65: 4623463301563138521
+      laptopkeyboard_66: -4273907887205959870
+      laptopkeyboard_67: -1922827827552668164
+      laptopkeyboard_68: -1243998033728417202
+      laptopkeyboard_69: 5294631876177991959
+      laptopkeyboard_7: -8390891557390126772
+      laptopkeyboard_70: 2359060003245335216
+      laptopkeyboard_71: -5837669376194950381
+      laptopkeyboard_72: -9009801013940616113
+      laptopkeyboard_73: 1085588257674883779
+      laptopkeyboard_74: 3021130535500018462
+      laptopkeyboard_75: -7945688129261188482
+      laptopkeyboard_76: -7965914383798650749
+      laptopkeyboard_77: 5521675019074790811
+      laptopkeyboard_8: 2892164192736868860
+      laptopkeyboard_9: 3488684869125320738
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,30 +1,24 @@
+using System;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    private Sprite bubble;
-
-    [SerializeField]
-    private Sprite urchin;
-
     [SerializeField]
     private new SpriteRenderer renderer;
 
     [SerializeField]
     private PlayerInput playerInput;
 
-    [SerializeField]
     protected float moveSpeed = 5;
 
-    [SerializeField]
     protected float jumpForce = 5;
+    protected int jumpFrequency = 1;
 
-    [SerializeField]
     protected float dashSpeed = 10;
+    protected float dashCooldown = 2f;
+    
+    protected float gravity = 9.81f;
 
     protected Rigidbody2D rb;
 
@@ -39,28 +33,37 @@ public class PlayerController : MonoBehaviour
     protected LayerMask groundLayer;
 
     private PlayerType _type = PlayerType.Unassigned;
+
+    private PlayerComponentScriptableObject _playerComponent;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     private void Start()
     {
         GameManager.instance.RegisterPlayer(this);
-        rb = GetComponent<Rigidbody2D>();
     }
-    public void SetPlayerType(PlayerType value)
+    
+    public void SetPlayerComponent(PlayerComponentScriptableObject playerComponent)
     {
+        _playerComponent = playerComponent;
+        
+        moveSpeed = _playerComponent.MovementSpeed;
+        jumpForce = _playerComponent.JumpForce;
+        jumpFrequency = _playerComponent.JumpFrequency;
+        dashSpeed = _playerComponent.DashSpeed;
+        dashCooldown = _playerComponent.DashCooldown;
+        gravity = _playerComponent.Gravity;
+        
         if (_type != PlayerType.Unassigned)
         {
             Debug.LogError($"Player is already assigned to {_type}");
             return;
         }
-        if (value == PlayerType.Bubble)
-        {
-            // Add bubble specific componets;
-            renderer.sprite = bubble;
-        }
-        else
-        {
-            // Add urchin specific components;
-            renderer.sprite = urchin;
-        }
+
+        renderer.sprite = playerComponent.PlayerSprite;
     }
     public virtual void OnMove(InputValue value)
     {
@@ -107,11 +110,4 @@ public class PlayerController : MonoBehaviour
             new Vector3(groundCheck.position.x, groundCheck.position.y - groundCheckDistance)
         );
     }
-}
-
-public enum PlayerType
-{
-    Unassigned,
-    Bubble,
-    Urchin
 }

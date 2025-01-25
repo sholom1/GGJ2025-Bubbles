@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6eb0a94ad404a5fadb063cef5028109, type: 3}
-  m_Name: PlayerComponent
+  m_Name: Player2Component
   m_EditorClassIdentifier: 
+  playerType: 2
   MovementSpeed: 5
   JumpForce: 5
   JumpFrequency: 1
-  DashDistance: 10
+  DashSpeed: 10
   DashCooldown: 2
   Gravity: 9.8
+  PlayerSprite: {fileID: 0}

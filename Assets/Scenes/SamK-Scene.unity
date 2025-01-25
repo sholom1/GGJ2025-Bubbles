@@ -585,6 +585,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players: []
+  playerComponents:
+  - {fileID: 11400000, guid: d38e6cc6a8a2e3f4a90b928b1bdd4cfc, type: 2}
+  - {fileID: 11400000, guid: a70d034946ca0ad4fba1983e78b6695b, type: 2}
+  dummyPlayerComponent: {fileID: 11400000, guid: dbba332d30821144fada8fc95be51c41, type: 2}
+  playerSprites:
+  - {fileID: 21300000, guid: f9422264535fb4a9aae2c21422784e04, type: 3}
+  - {fileID: 21300000, guid: a63302a83758f435089d69315f8a918e, type: 3}
   player1JoinScreen: {fileID: 1484827264}
   player2JoinScreen: {fileID: 970258506}
   joinScreen: {fileID: 497532211}
