@@ -3,14 +3,19 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField] 
+    protected PlayerComponentScriptableObject playerComponent;
+    
     protected float moveSpeed = 5;
-
-    [SerializeField]
+    
     protected float jumpForce = 5;
+    protected int jumpFrequency = 1;
+    
+    protected float dashDistance = 10;
+    protected float dashCooldown = 2;
+    
+    protected float gravity = 9.8f;
 
-    [SerializeField]
-    protected float dashSpeed = 10;
 
     protected Rigidbody2D rb;
 
@@ -23,12 +28,18 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     protected LayerMask groundLayer;
-
     
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        moveSpeed = playerComponent.MovementSpeed;
+        jumpForce = playerComponent.JumpForce;
+        jumpFrequency = playerComponent.JumpFrequency;
+        dashDistance = playerComponent.DashDistance;
+        dashCooldown = playerComponent.DashCooldown;
+        gravity = playerComponent.Gravity;
     }
 
     
@@ -58,8 +69,8 @@ public class PlayerController : MonoBehaviour
         var yInput = Input.GetAxisRaw("Vertical");
         
         rb.linearVelocity = new Vector2(
-            rb.linearVelocityX + xInput * dashSpeed,
-            rb.linearVelocityY + yInput * dashSpeed
+            rb.linearVelocityX + xInput * dashDistance,
+            rb.linearVelocityY + yInput * dashDistance
         );
     }
 
