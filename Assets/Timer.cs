@@ -11,6 +11,8 @@ public class Timer : MonoBehaviour
     private TextMeshProUGUI timer;
     [SerializeField]
     private Animator animator;
+    [SerializeField]
+    private float pulseThreshold;
     public UnityEvent OnEnd;
     private float timeRemaining;
     private void Start()
@@ -20,12 +22,24 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeRemaining -= Time.deltaTime;
+        if (!animator.GetBool("Pulse"))
+            timeRemaining -= Time.deltaTime;
+
         timer.text = timeRemaining.ToString("0");
+
+        if (timeRemaining <= pulseThreshold)
+        {
+            animator.SetBool("Pulse", true);
+        }
+
         if (timeRemaining <= 0)
         {
             OnEnd.Invoke();
             enabled = false;
         }
+    }
+    public void TickTimerAnim(AnimationEvent animationEvent)
+    {
+        timeRemaining = Mathf.Max(0, timeRemaining - 1);
     }
 }
