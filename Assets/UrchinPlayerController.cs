@@ -12,6 +12,5 @@ public class UrchinPlayerController : PlayerController
     public override void OnMove(InputValue value)
     {
         base.OnMove(value);
-
     }
 }
