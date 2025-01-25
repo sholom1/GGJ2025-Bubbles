@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.PlayerLoop;
 
 public class PlayerController : MonoBehaviour
 {
@@ -36,6 +37,9 @@ public class PlayerController : MonoBehaviour
 
     private PlayerComponentScriptableObject _playerComponent;
 
+
+    private Vector2 _inputValues;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -46,6 +50,11 @@ public class PlayerController : MonoBehaviour
         GameManager.instance.RegisterPlayer(this);
     }
     
+
+    private void FixedUpdate() {
+        PlayerMovement();
+    }
+
     public void SetPlayerComponent(PlayerComponentScriptableObject playerComponent)
     {
         _playerComponent = playerComponent;
@@ -65,6 +74,7 @@ public class PlayerController : MonoBehaviour
 
         renderer.sprite = playerComponent.PlayerSprite;
     }
+    
     public virtual void OnMove(InputValue value)
     {
         var inputValues = value.Get<Vector2>();
@@ -72,15 +82,14 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
-        if (!IsGroundDetected())
-        {
-            // Cant move while in the air
-            inputValues.y = 0;
-        }
 
+        _inputValues = inputValues;
+    }
+
+    private void PlayerMovement() {
         rb.linearVelocity = new Vector2(
-            rb.linearVelocityX + inputValues.x * moveSpeed,
-            rb.linearVelocityY + inputValues.y * jumpForce
+            _inputValues.x * moveSpeed,
+            rb.linearVelocityY
         );
     }
 
@@ -100,6 +109,37 @@ public class PlayerController : MonoBehaviour
         );
     }
 
+    private int currentJumpCount = 0;
+    
+    private bool CanJump() {
+        bool groundDetected = IsGroundDetected();
+        if (groundDetected) {
+            currentJumpCount = 0;
+            return true;
+        }
+
+        if (currentJumpCount < _playerComponent.JumpFrequency) {
+            return true;
+        }
+
+        return false;
+    }
+    void OnJump(InputValue value) 
+    {
+        if (value.isPressed && CanJump())
+        {
+            Jump();
+        }
+    } 
+
+    private void Jump() {
+        rb.linearVelocity = new Vector2(
+            rb.linearVelocityX,
+            jumpForce
+        );
+        
+        currentJumpCount++;
+    }
     public virtual bool IsGroundDetected() =>
         Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, groundLayer);
 
