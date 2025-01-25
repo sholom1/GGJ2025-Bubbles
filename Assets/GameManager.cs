@@ -1,10 +1,21 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
     private List<PlayerController> players = new List<PlayerController>();
+    [SerializeField]
+    private JoinPanel player1JoinScreen;
+    [SerializeField]
+    private JoinPanel player2JoinScreen;
+    [SerializeField]
+    private GameObject joinScreen;
+    [SerializeField]
+    private Button startButton;
     public static GameManager instance;
     private void Awake()
     {
@@ -22,11 +33,21 @@ public class GameManager : MonoBehaviour
         {
             //Player is bubble
             player.SetPlayerType(PlayerType.Bubble);
+            player1JoinScreen.UpdateJoinText();
         }
         else
         {
             //Player is urchin
             player.SetPlayerType(PlayerType.Urchin);
+            player2JoinScreen.UpdateJoinText();
+            startButton.interactable = true;
+            startButton.GetComponentInChildren<TextMeshProUGUI>().text = "P1 Start";
+            EventSystem.current.SetSelectedGameObject(startButton.gameObject);
         }
+    }
+    public void StartGame()
+    {
+        Debug.Log("Game Start");
+        Destroy(joinScreen);
     }
 }

@@ -1,4 +1,7 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,6 +11,8 @@ public class PlayerController : MonoBehaviour
     private Sprite urchin;
     [SerializeField]
     private new SpriteRenderer renderer;
+    [SerializeField]
+    private PlayerInput playerInput;
     private PlayerType _type = PlayerType.Unassigned;
     private void Start()
     {

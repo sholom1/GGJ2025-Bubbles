@@ -199,3 +199,4 @@ MonoBehaviour:
   bubble: {fileID: 21300000, guid: f9422264535fb4a9aae2c21422784e04, type: 3}
   urchin: {fileID: 21300000, guid: a63302a83758f435089d69315f8a918e, type: 3}
   renderer: {fileID: 2001226435017034775}
+  playerInput: {fileID: 8939170092722960000}

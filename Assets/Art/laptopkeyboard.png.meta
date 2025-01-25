@@ -1,0 +1,2067 @@
+fileFormatVersion: 2
+guid: 5dc99f403b6a84d98b57d42a18450c7e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5945806157132763397
+    second: laptopkeyboard_0
+  - first:
+      213: -166262392888914382
+    second: laptopkeyboard_1
+  - first:
+      213: -2181249850474189527
+    second: laptopkeyboard_2
+  - first:
+      213: -5627905234422502024
+    second: laptopkeyboard_3
+  - first:
+      213: -681609727281123584
+    second: laptopkeyboard_4
+  - first:
+      213: -4407757333580754405
+    second: laptopkeyboard_5
+  - first:
+      213: 3931998220294664605
+    second: laptopkeyboard_6
+  - first:
+      213: -8390891557390126772
+    second: laptopkeyboard_7
+  - first:
+      213: 2892164192736868860
+    second: laptopkeyboard_8
+  - first:
+      213: 3488684869125320738
+    second: laptopkeyboard_9
+  - first:
+      213: 4526605997519003866
+    second: laptopkeyboard_10
+  - first:
+      213: -8719023110748027147
+    second: laptopkeyboard_11
+  - first:
+      213: -5882911667875041463
+    second: laptopkeyboard_12
+  - first:
+      213: 5176314707995304688
+    second: laptopkeyboard_13
+  - first:
+      213: -1451541987895902490
+    second: laptopkeyboard_14
+  - first:
+      213: 5020461773701049187
+    second: laptopkeyboard_15
+  - first:
+      213: 6332364399929039822
+    second: laptopkeyboard_16
+  - first:
+      213: -6194132225073268049
+    second: laptopkeyboard_17
+  - first:
+      213: 6240991148459813452
+    second: laptopkeyboard_18
+  - first:
+      213: 3968691657827817808
+    second: laptopkeyboard_19
+  - first:
+      213: 965338937852976962
+    second: laptopkeyboard_20
+  - first:
+      213: 601791230420434087
+    second: laptopkeyboard_21
+  - first:
+      213: 6823510024348555756
+    second: laptopkeyboard_22
+  - first:
+      213: -8740418968150650571
+    second: laptopkeyboard_23
+  - first:
+      213: 2666268726304306056
+    second: laptopkeyboard_24
+  - first:
+      213: -2305407089453184502
+    second: laptopkeyboard_25
+  - first:
+      213: -9023110927288227733
+    second: laptopkeyboard_26
+  - first:
+      213: 6038104359079437474
+    second: laptopkeyboard_27
+  - first:
+      213: -3249687342077305593
+    second: laptopkeyboard_28
+  - first:
+      213: 762659948728452223
+    second: laptopkeyboard_29
+  - first:
+      213: 6370037562495213342
+    second: laptopkeyboard_30
+  - first:
+      213: -3902132786866834903
+    second: laptopkeyboard_31
+  - first:
+      213: -510688700683251887
+    second: laptopkeyboard_32
+  - first:
+      213: -5939444423459032055
+    second: laptopkeyboard_33
+  - first:
+      213: 3775892701786486608
+    second: laptopkeyboard_34
+  - first:
+      213: -3262376288470849818
+    second: laptopkeyboard_35
+  - first:
+      213: 819974574364521175
+    second: laptopkeyboard_36
+  - first:
+      213: 2964750715574192064
+    second: laptopkeyboard_37
+  - first:
+      213: 4910981291682788440
+    second: laptopkeyboard_38
+  - first:
+      213: -1561166184414955676
+    second: laptopkeyboard_39
+  - first:
+      213: 4805126996867920452
+    second: laptopkeyboard_40
+  - first:
+      213: -2180485382184463900
+    second: laptopkeyboard_41
+  - first:
+      213: -2687314722257153970
+    second: laptopkeyboard_42
+  - first:
+      213: 5865186556628993157
+    second: laptopkeyboard_43
+  - first:
+      213: -8468551733250976781
+    second: laptopkeyboard_44
+  - first:
+      213: -2735654246145690169
+    second: laptopkeyboard_45
+  - first:
+      213: 3009156863307184217
+    second: laptopkeyboard_46
+  - first:
+      213: 375742250256101064
+    second: laptopkeyboard_47
+  - first:
+      213: -8211659204567533674
+    second: laptopkeyboard_48
+  - first:
+      213: -7629108249960560271
+    second: laptopkeyboard_49
+  - first:
+      213: -7102479662544133596
+    second: laptopkeyboard_50
+  - first:
+      213: 3066952836859219933
+    second: laptopkeyboard_51
+  - first:
+      213: 1352501100660522623
+    second: laptopkeyboard_52
+  - first:
+      213: 2623859919143071683
+    second: laptopkeyboard_53
+  - first:
+      213: -1158884282075057474
+    second: laptopkeyboard_54
+  - first:
+      213: 4074720973317444761
+    second: laptopkeyboard_55
+  - first:
+      213: -1874782376509164665
+    second: laptopkeyboard_56
+  - first:
+      213: -7354313386465947430
+    second: laptopkeyboard_57
+  - first:
+      213: 1691672782443791452
+    second: laptopkeyboard_58
+  - first:
+      213: 6613553795681116067
+    second: laptopkeyboard_59
+  - first:
+      213: 7308055058194885357
+    second: laptopkeyboard_60
+  - first:
+      213: 1640690602888316060
+    second: laptopkeyboard_61
+  - first:
+      213: 2547466414026209737
+    second: laptopkeyboard_62
+  - first:
+      213: -724569839411959373
+    second: laptopkeyboard_63
+  - first:
+      213: 1976185900248888194
+    second: laptopkeyboard_64
+  - first:
+      213: 4623463301563138521
+    second: laptopkeyboard_65
+  - first:
+      213: -4273907887205959870
+    second: laptopkeyboard_66
+  - first:
+      213: -1922827827552668164
+    second: laptopkeyboard_67
+  - first:
+      213: -1243998033728417202
+    second: laptopkeyboard_68
+  - first:
+      213: 5294631876177991959
+    second: laptopkeyboard_69
+  - first:
+      213: 2359060003245335216
+    second: laptopkeyboard_70
+  - first:
+      213: -5837669376194950381
+    second: laptopkeyboard_71
+  - first:
+      213: -9009801013940616113
+    second: laptopkeyboard_72
+  - first:
+      213: 1085588257674883779
+    second: laptopkeyboard_73
+  - first:
+      213: 3021130535500018462
+    second: laptopkeyboard_74
+  - first:
+      213: -7945688129261188482
+    second: laptopkeyboard_75
+  - first:
+      213: -7965914383798650749
+    second: laptopkeyboard_76
+  - first:
+      213: 5521675019074790811
+    second: laptopkeyboard_77
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: laptopkeyboard_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 465
+        width: 88
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5019a3b923fb38250800000000000000
+      internalID: 5945806157132763397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 375
+        width: 64
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23e895c0c3151bdf0800000000000000
+      internalID: -166262392888914382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 375
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92dac1851d4aab1e0800000000000000
+      internalID: -2181249850474189527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_3
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 465
+        width: 88
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87d6fa8d10aa5e1b0800000000000000
+      internalID: -5627905234422502024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_4
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 375
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00f25f9709f6a86f0800000000000000
+      internalID: -681609727281123584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_5
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 465
+        width: 87
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b12dbc3fe0084d2c0800000000000000
+      internalID: -4407757333580754405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_6
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 375
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d91b12a7c83419630800000000000000
+      internalID: 3931998220294664605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_7
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 465
+        width: 88
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c41ffecd5909d8b80800000000000000
+      internalID: -8390891557390126772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_8
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 375
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf97f2c8208032820800000000000000
+      internalID: 2892164192736868860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_9
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 465
+        width: 88
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 220be75976c4a6030800000000000000
+      internalID: 3488684869125320738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_10
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 375
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad0e548fb2cb1de30800000000000000
+      internalID: 4526605997519003866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_11
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 465
+        width: 88
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f641771daecff680800000000000000
+      internalID: -8719023110748027147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_12
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 375
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94fae4fc103bb5ea0800000000000000
+      internalID: -5882911667875041463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_13
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 465
+        width: 88
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f2a0b73dc6f5d740800000000000000
+      internalID: 5176314707995304688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_14
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 375
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ee76eaa0461bdbe0800000000000000
+      internalID: -1451541987895902490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_15
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 465
+        width: 88
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36be0e532634ca540800000000000000
+      internalID: 5020461773701049187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_16
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 375
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecb99161fd311e750800000000000000
+      internalID: 6332364399929039822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_17
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 465
+        width: 88
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faa35b82f850a0aa0800000000000000
+      internalID: -6194132225073268049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_18
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 375
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4aed4222647c9650800000000000000
+      internalID: 6240991148459813452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_19
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 465
+        width: 88
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05912e72900a31730800000000000000
+      internalID: 3968691657827817808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_20
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 375
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24f549e36a2956d00800000000000000
+      internalID: 965338937852976962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_21
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 465
+        width: 88
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7acb7268fedf95800800000000000000
+      internalID: 601791230420434087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_22
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 375
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce9dc92f63af1be50800000000000000
+      internalID: 6823510024348555756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_23
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 465
+        width: 88
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5315b47d14bc3b680800000000000000
+      internalID: -8740418968150650571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_24
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 465
+        width: 88
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 883f913b74d700520800000000000000
+      internalID: 2666268726304306056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_25
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 375
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0ac97a777c8100e0800000000000000
+      internalID: -2305407089453184502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_26
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 465
+        width: 88
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b682a0a0b6877c280800000000000000
+      internalID: -9023110927288227733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_27
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 375
+        width: 171
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a4eaaf5ce7abc350800000000000000
+      internalID: 6038104359079437474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_28
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 465
+        width: 88
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70d1668749ac6e2d0800000000000000
+      internalID: -3249687342077305593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_29
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 375
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f748060ce23859a00800000000000000
+      internalID: 762659948728452223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_30
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 465
+        width: 87
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1f1c66c96be66850800000000000000
+      internalID: 6370037562495213342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_31
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 285
+        width: 114
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 922b56c97e6d8d9c0800000000000000
+      internalID: -3902132786866834903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_32
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 195
+        width: 134
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f08fc155ba9e8f0800000000000000
+      internalID: -510688700683251887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_33
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 285
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 904bc80f3cad29da0800000000000000
+      internalID: -5939444423459032055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_34
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 195
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05739ff186aa66430800000000000000
+      internalID: 3775892701786486608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_35
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 285
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e6a90aec06b9b2d0800000000000000
+      internalID: -3262376288470849818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_36
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 195
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d279dde782216b00800000000000000
+      internalID: 819974574364521175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_37
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 285
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c782616119e42920800000000000000
+      internalID: 2964750715574192064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_38
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 195
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 854775d177f472440800000000000000
+      internalID: 4910981291682788440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_39
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 285
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 467389e60af955ae0800000000000000
+      internalID: -1561166184414955676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_40
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 195
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 442b3f48b8d3fa240800000000000000
+      internalID: 4805126996867920452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_41
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 285
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e196fcf81c5db1e0800000000000000
+      internalID: -2180485382184463900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_42
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 195
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e405f248f7db4bad0800000000000000
+      internalID: -2687314722257153970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_43
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 285
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58484412914556150800000000000000
+      internalID: 5865186556628993157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_44
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 195
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f39e812119a97a80800000000000000
+      internalID: -8468551733250976781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_45
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 285
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c5723e05f0090ad0800000000000000
+      internalID: -2735654246145690169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_46
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 195
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9587ad6593ca2c920800000000000000
+      internalID: 3009156863307184217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_47
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 285
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ceee99f597e63500800000000000000
+      internalID: 375742250256101064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_48
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 195
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6977f2fe5735a0e80800000000000000
+      internalID: -8211659204567533674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_49
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 285
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1794918a776ff1690800000000000000
+      internalID: -7629108249960560271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_50
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 195
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 422ee91a06cee6d90800000000000000
+      internalID: -7102479662544133596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_51
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 285
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddfcedf0b51009a20800000000000000
+      internalID: 3066952836859219933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_52
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 195
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7ef13fc59c05c210800000000000000
+      internalID: 1352501100660522623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_53
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 285
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cf68e4d1b2d96420800000000000000
+      internalID: 2623859919143071683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_54
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 195
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb2f12fa2e0daefe0800000000000000
+      internalID: -1158884282075057474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_55
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 285
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9949b6de2215c8830800000000000000
+      internalID: 4074720973317444761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_56
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 105
+        width: 281
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78332019c5f6bf5e0800000000000000
+      internalID: -1874782376509164665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_57
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 105
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad01cc890fa30f990800000000000000
+      internalID: -7354313386465947430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_58
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 15
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5442c9ce670a7710800000000000000
+      internalID: 1691672782443791452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_59
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 105
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af5286132018cb50800000000000000
+      internalID: 6613553795681116067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_60
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 15
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deae3be0b5d6b6560800000000000000
+      internalID: 7308055058194885357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_61
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 105
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c94ca7b1967e4c610800000000000000
+      internalID: 1640690602888316060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_62
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 15
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c9354dd43b6a5320800000000000000
+      internalID: 2547466414026209737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_63
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 105
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b963eae19fc1f5f0800000000000000
+      internalID: -724569839411959373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_64
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 15
+        width: 114
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28378722b92dc6b10800000000000000
+      internalID: 1976185900248888194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_65
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 105
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d1c9b96067d92040800000000000000
+      internalID: 4623463301563138521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_66
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 15
+        width: 548
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2473954bb6700b4c0800000000000000
+      internalID: -4273907887205959870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_67
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 105
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf5bc76474eb055e0800000000000000
+      internalID: -1922827827552668164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_68
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 105
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e42555a116e6cbee0800000000000000
+      internalID: -1243998033728417202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_69
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 105
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7199c04a3af4a7940800000000000000
+      internalID: 5294631876177991959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_70
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 105
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b22549f2901db020800000000000000
+      internalID: 2359060003245335216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_71
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 105
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31b49b3b1ae6cfea0800000000000000
+      internalID: -5837669376194950381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_72
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 105
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f448d1bb6b1c6f280800000000000000
+      internalID: -9009801013940616113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_73
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 15
+        width: 114
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c2fb07c4c8c01f00800000000000000
+      internalID: 1085588257674883779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_74
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 105
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e13709427363de920800000000000000
+      internalID: 3021130535500018462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_75
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 15
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7a49579ebe3bb190800000000000000
+      internalID: -7945688129261188482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_76
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 105
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 388b18ab213637190800000000000000
+      internalID: -7965914383798650749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laptopkeyboard_77
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 15
+        width: 271
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b95e91dbc2ee0ac40800000000000000
+      internalID: 5521675019074790811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
