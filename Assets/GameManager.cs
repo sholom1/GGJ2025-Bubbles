@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
             // player.SetPlayerType(PlayerType.Bubble);
             playerComponents[0].PlayerSprite = playerSprites[0];
             player.SetPlayerComponent(playerComponents.Count > 0 ? playerComponents[0] : dummyPlayerComponent);
+            player.name = "Player 1";
             player1JoinScreen.UpdateJoinText();
         }
         else
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
             // player.SetPlayerType(PlayerType.Urchin);
             playerComponents[1].PlayerSprite = playerSprites[1];
             player.SetPlayerComponent(playerComponents.Count > 1 ? playerComponents[1] : dummyPlayerComponent);
+            player.name = "Player 2";
 
             player2JoinScreen.UpdateJoinText();
             startButton.interactable = true;
@@ -59,11 +61,16 @@ public class GameManager : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(startButton.gameObject);
         }
     }
+    public PlayerController GetOtherPlayer(PlayerController self)
+    {
+        return players.Find(value => value != self);
+    }
     public void StartGame()
     {
         Debug.Log("Game Start");
         timer.gameObject.SetActive(true);
         timer.OnEnd.AddListener(GameOver);
+        players.ForEach(player => player.GetComponent<HeartBeatRumble>().enabled = true);
         Destroy(joinScreen);
     }
     public void GameOver()
