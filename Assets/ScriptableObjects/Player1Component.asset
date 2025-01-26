@@ -27,4 +27,4 @@ MonoBehaviour:
   DashDuration: 0.2
   StunForce: 5
   StunCooldown: 1
-  GravityScale: 1
+  GravityScale: 0.5

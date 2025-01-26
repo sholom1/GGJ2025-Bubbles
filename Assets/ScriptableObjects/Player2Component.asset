@@ -20,11 +20,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   MovementSpeed: 10
-  JumpForce: 10
+  JumpForce: 15
   JumpFrequency: 1
   DashSpeed: 20
   DashCooldown: 4
   DashDuration: 0.2
   StunForce: 5
   StunCooldown: 3
-  GravityScale: 1
+  GravityScale: 5
