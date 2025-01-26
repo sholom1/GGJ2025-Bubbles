@@ -2037,7 +2037,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927049281}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -3288,7 +3288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5106134792884992818, guid: a6abca7d5b2e84b1598f2a5bd9c68824, type: 3}
       propertyPath: duration
-      value: 45
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5106134792884992818, guid: a6abca7d5b2e84b1598f2a5bd9c68824, type: 3}
       propertyPath: OnEnd.m_PersistentCalls.m_Calls.Array.size

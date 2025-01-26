@@ -111,7 +111,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        players.ForEach(player => player.gameObject.SetActive(false));
+        players.ForEach(player => player.GetComponent<Rigidbody2D>().simulated = false);
         joinScreen.SetActive(false);
         var cinematicOpener = CinematicOpenerController.instance;
         if (cinematicOpener != null) {
@@ -124,8 +124,8 @@ public class GameManager : MonoBehaviour
     }
 
     public void StartNewRound()
-    {
-        players.ForEach(player => player.gameObject.SetActive(true));
+    {        
+        players.ForEach(player => player.GetComponent<Rigidbody2D>().simulated = true);
         collectedHearts = 0;
         canBubblePop = false;
         Debug.Log("Game Start");
