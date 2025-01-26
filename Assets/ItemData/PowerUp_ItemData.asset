@@ -15,6 +15,6 @@ MonoBehaviour:
   itemType: 5
   itemName: PowerUp
   description: Gives speed boost to bubble or ripple effect to urchin
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: -5575374936625819304, guid: 83f09b24c051f43b9a7c51519bb4c943, type: 3}
   effectDuration: 3
   destroyOnPickup: 1
