@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
     private bool isRoundActive;
+    private PlayerController _winner;
 
     private void Awake()
     {
@@ -63,8 +64,18 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         Debug.Log("Game Start");
+        for(int i = 0; i < players.Count; i++) {
+            var player = players[i];
+            player.SetPlayerComponent(playerComponents[i]);
+            player.ApplyPerks();
+        }
+
         timer.gameObject.SetActive(true);
-        timer.OnEnd.AddListener(GameOver);
+        timer.OnEnd.AddListener(() =>
+        {
+            var winner = players.Find(player => player.GetPlayerType() == PlayerType.Urchin);
+            GameOver(winner);
+        });
         isRoundActive = true;
         players.ForEach(player => player.GetComponent<HeartBeatRumble>().enabled = true);
         Destroy(joinScreen);
@@ -76,10 +87,12 @@ public class GameManager : MonoBehaviour
         timer.ModifyTime(timeChange);
     }
 
-    public void GameOver()
+    public void GameOver(PlayerController winner)
     {
+        _winner = winner;
         isRoundActive = false;
-        SceneManager.LoadScene(0);
+        PerkManager.instance.LoadPerks(winner);
+        // SceneManager.LoadScene(0);
     }
 
     public void BubbleReachedUrchin()
@@ -89,7 +102,15 @@ public class GameManager : MonoBehaviour
             isRoundActive = false;
             // Handle bubble victory logic here
             Debug.Log("Bubble wins!");
-            GameOver();
+            var winner = players.Find(player => player.GetPlayerType() == PlayerType.Bubble);
+            GameOver(winner);
+        }
+    }
+
+    public void GiveWinnerAPerk(Perk perk) {
+        if (_winner != null) {
+            _winner.AddPerk(perk);
+            StartGame();
         }
     }
 }

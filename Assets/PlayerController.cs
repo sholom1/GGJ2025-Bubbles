@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     protected float moveSpeed = 5;
 
-    protected float jumpForce = 5;
+    public float jumpForce = 5;
     protected int jumpFrequency = 1;
 
     protected float dashSpeed = 10;
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour
     private float dashDuration;
     private float lastDashTime;
 
+    private List<Perk> _perks = new List<Perk>();
 
     private Vector2 _inputValues;
 
@@ -53,6 +55,10 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate() {
         dashDurationTimer -= Time.deltaTime;
         PlayerMovement();
+    }
+
+    public PlayerType GetPlayerType() {
+        return _type;
     }
 
     public void SetPlayerType(PlayerType type)
@@ -160,6 +166,14 @@ public class PlayerController : MonoBehaviour
         Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, groundLayer);
 
     bool IsDashing() => dashDurationTimer > 0;
+
+    public void AddPerk(Perk perk) {
+        _perks.Add(perk);
+    }
+
+    public void ApplyPerks() {
+        _perks.ForEach(perk => perk.Action(this));
+    }
 
     private void OnDrawGizmos()
     {
