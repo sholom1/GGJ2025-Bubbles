@@ -81,6 +81,7 @@ public class GameManager : MonoBehaviour
         else if (players.Count == 2)
         {
             player.SetPlayerType(PlayerType.Urchin);
+            player.SetPlayerPosition(spawnController.GetSpawnPoint());
             if (playerSprites.Count > 1)
             {
                 playerComponents[1].PlayerSprite = playerSprites[1];
@@ -193,7 +194,7 @@ public class GameManager : MonoBehaviour
 
     public void BubbleReachedUrchin()
     {
-        if (isRoundActive && canBubblePop)
+        if (isRoundActive/* && canBubblePop*/)
         {
             isRoundActive = false;
             Debug.Log("Bubble wins!");
