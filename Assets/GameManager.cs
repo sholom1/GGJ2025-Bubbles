@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
         timer.gameObject.SetActive(true);
         timer.OnEnd.AddListener(GameOver);
         isRoundActive = true;
-        players.ForEach(player => player.GetComponent<HeartBeatRumble>().enabled = true);
+        //players.ForEach(player => player.GetComponent<HeartBeatRumble>().enabled = true);
         Destroy(joinScreen);
     }
 
