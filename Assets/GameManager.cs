@@ -66,10 +66,10 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Start");
         for(int i = 0; i < players.Count; i++) {
             var player = players[i];
-            player.SetPlayerComponent(playerComponents[i]);
+            player.attributeController.ResetAllAttributes();
             player.ApplyPerks();
         }
-
+        
         timer.gameObject.SetActive(true);
         timer.OnEnd.AddListener(() =>
         {
