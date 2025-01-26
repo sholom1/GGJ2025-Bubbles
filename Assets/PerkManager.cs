@@ -11,9 +11,9 @@ public class PerkManager : MonoBehaviour
    public static PerkManager instance;
 
    private List<Perk> availablePerks = new List<Perk>() {
-        new Perk("Jump force", (player) => player.jumpForce += 1),
-        new Perk("Jump force +", (player) => player.jumpForce += 3),
-        new Perk("Jump force ++", (player) => player.jumpForce += 5),
+        new Perk("Jump force", (player) => player.attributeController.SetJumpForce(1.25f)),
+        new Perk("Jump force +", (player) => player.attributeController.SetJumpForce(1.5f)),
+        new Perk("Jump force ++", (player) => player.attributeController.SetJumpForce(2f)),
    };
 
     private void Awake()

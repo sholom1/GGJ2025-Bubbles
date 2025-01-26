@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
 
     private PlayerType _type = PlayerType.Unassigned;
     
-    private PlayerAttributeController _attributeController;
+    public  PlayerAttributeController attributeController;
     private int currentJumpCount = 0;
     private float dashDurationTimer;
     private float lastDashTime;
@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        _attributeController = new PlayerAttributeController(playerComponent);
+        attributeController = new PlayerAttributeController(playerComponent);
         
         rb.gravityScale = playerComponent.GravityScale;
 
@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
         rb.linearVelocity = new Vector2(
-            _inputValues.x * _attributeController.MoveSpeed,
+            _inputValues.x * attributeController.MoveSpeed,
             rb.linearVelocityY
         );
     }
@@ -104,14 +104,14 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        if(Time.time - lastDashTime < _attributeController.DashCooldown) {
+        if(Time.time - lastDashTime < attributeController.DashCooldown) {
             return;
         }
 
-        dashDurationTimer = _attributeController.DashDuration;
+        dashDurationTimer = attributeController.DashDuration;
         lastDashTime = Time.time;
         rb.linearVelocity = new Vector2(
-            _inputValues.x * _attributeController.DashSpeed,
+            _inputValues.x * attributeController.DashSpeed,
             rb.linearVelocityY
         );
     }
@@ -122,10 +122,10 @@ public class PlayerController : MonoBehaviour
             currentJumpCount = 0;
             return true;
         }
-        if (_attributeController == null) {
+        if (attributeController == null) {
             return false;
         }
-        if (currentJumpCount < _attributeController.JumpFrequency) {
+        if (currentJumpCount < attributeController.JumpFrequency) {
             return true;
         }
 
@@ -143,7 +143,7 @@ public class PlayerController : MonoBehaviour
     private void Jump() {
         rb.linearVelocity = new Vector2(
             rb.linearVelocityX,
-            _attributeController.JumpForce
+            attributeController.JumpForce
         );
 
         currentJumpCount++;
@@ -173,6 +173,6 @@ public class PlayerController : MonoBehaviour
     [ContextMenu("Reset Attributes To Default")]
     public void ResetAllAttributes()
     {
-        _attributeController.ResetAllAttributes();
+        attributeController.ResetAllAttributes();
     }
 }
