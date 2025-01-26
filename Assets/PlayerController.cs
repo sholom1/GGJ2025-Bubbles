@@ -116,7 +116,9 @@ public class PlayerController : MonoBehaviour
             currentJumpCount = 0;
             return true;
         }
-
+        if (_attributeController == null) {
+            return false;
+        }
         if (currentJumpCount < _attributeController.JumpFrequency) {
             return true;
         }
