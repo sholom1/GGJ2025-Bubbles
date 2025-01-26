@@ -24,43 +24,7 @@ public class PlayerComponentScriptableObject : ScriptableObject
     public float DashDuration = 0.2f;
     
     public float GravityScale = 1f;
-
     
-    public void SetMovementSpeed(float multiplier)
-    {
-        MovementSpeed *= multiplier;
-    }
-
-    public void SetJumpForce(float multiplier)
-    {
-        JumpForce *= multiplier;
-    }
-
-    public void AddExtraJump(int value)
-    {
-        JumpFrequency += value;
-    }
-
-    public void SetDashSpeed(float multiplier)
-    {
-        DashSpeed *= multiplier;
-    }
-
-    public void SetDashCooldown(float multiplier)
-    {
-        DashCooldown *= multiplier;
-    }
-
-    public void SetDashDuration(float multiplier)
-    {
-        DashDuration *= multiplier;
-    }
-
-    public void SetGravityScale(float multiplier)
-    {
-        GravityScale *= multiplier;
-    }
-
     public void ResetAllAttributes()
     {
         MovementSpeed = 5f;
