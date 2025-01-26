@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -23,11 +24,12 @@ public class PlayerController : MonoBehaviour
 
     private PlayerType _type = PlayerType.Unassigned;
     
-    private PlayerAttributeController _attributeController;
+    public  PlayerAttributeController attributeController;
     private int currentJumpCount = 0;
     private float dashDurationTimer;
     private float lastDashTime;
-    
+
+    private List<Perk> _perks = new List<Perk>();
 
     private Vector2 _inputValues;
 
@@ -44,6 +46,10 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate() {
         dashDurationTimer -= Time.deltaTime;
         PlayerMovement();
+    }
+
+    public PlayerType GetPlayerType() {
+        return _type;
     }
 
     public void SetPlayerType(PlayerType type)
@@ -63,7 +69,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        _attributeController = new PlayerAttributeController(playerComponent);
+        attributeController = new PlayerAttributeController(playerComponent);
         
         rb.gravityScale = playerComponent.GravityScale;
 
@@ -86,7 +92,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
         rb.linearVelocity = new Vector2(
-            _inputValues.x * _attributeController.MoveSpeed,
+            _inputValues.x * attributeController.MoveSpeed,
             rb.linearVelocityY
         );
     }
@@ -98,14 +104,14 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        if(Time.time - lastDashTime < _attributeController.DashCooldown) {
+        if(Time.time - lastDashTime < attributeController.DashCooldown) {
             return;
         }
 
-        dashDurationTimer = _attributeController.DashDuration;
+        dashDurationTimer = attributeController.DashDuration;
         lastDashTime = Time.time;
         rb.linearVelocity = new Vector2(
-            _inputValues.x * _attributeController.DashSpeed,
+            _inputValues.x * attributeController.DashSpeed,
             rb.linearVelocityY
         );
     }
@@ -116,10 +122,10 @@ public class PlayerController : MonoBehaviour
             currentJumpCount = 0;
             return true;
         }
-        if (_attributeController == null) {
+        if (attributeController == null) {
             return false;
         }
-        if (currentJumpCount < _attributeController.JumpFrequency) {
+        if (currentJumpCount < attributeController.JumpFrequency) {
             return true;
         }
 
@@ -137,7 +143,7 @@ public class PlayerController : MonoBehaviour
     private void Jump() {
         rb.linearVelocity = new Vector2(
             rb.linearVelocityX,
-            _attributeController.JumpForce
+            attributeController.JumpForce
         );
 
         currentJumpCount++;
@@ -147,6 +153,14 @@ public class PlayerController : MonoBehaviour
         Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, groundLayer);
 
     bool IsDashing() => dashDurationTimer > 0;
+
+    public void AddPerk(Perk perk) {
+        _perks.Add(perk);
+    }
+
+    public void ApplyPerks() {
+        _perks.ForEach(perk => perk.Action(this));
+    }
 
     private void OnDrawGizmos()
     {
@@ -159,6 +173,6 @@ public class PlayerController : MonoBehaviour
     [ContextMenu("Reset Attributes To Default")]
     public void ResetAllAttributes()
     {
-        _attributeController.ResetAllAttributes();
+        attributeController.ResetAllAttributes();
     }
 }
