@@ -650,6 +650,51 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &601704872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 601704873}
+  - component: {fileID: 601704874}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &601704873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601704872}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &601704874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601704872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a3efc992f684813842f3c427e6c09f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints: []
 --- !u!1 &666762315
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,7 +731,19 @@ MonoBehaviour:
   m_JoinBehavior: 0
   m_PlayerJoinedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 666762318}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnPlayerJoined
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_PlayerLeftEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -759,6 +816,7 @@ MonoBehaviour:
   joinScreen: {fileID: 497532211}
   startButton: {fileID: 392162382}
   timer: {fileID: 1418321174}
+  spawnController: {fileID: 601704874}
 --- !u!1001 &711875952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3511,6 +3569,7 @@ SceneRoots:
   - {fileID: 4219962102411975137}
   - {fileID: 189720535}
   - {fileID: 666762317}
+  - {fileID: 601704873}
   - {fileID: 2096117877}
   - {fileID: 414906532}
   - {fileID: 1762220765}

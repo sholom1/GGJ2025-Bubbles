@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject joinScreen;
     [SerializeField] private Button startButton;
     [SerializeField] private Timer timer;
+    [SerializeField] private SpawnController spawnController;
 
     public static GameManager instance;
     private bool isRoundActive;
@@ -65,6 +66,7 @@ public class GameManager : MonoBehaviour
         if (players.Count == 1)
         {
             player.SetPlayerType(PlayerType.Bubble);
+            player.SetPlayerPosition(spawnController.GetSpawnPoint());
             if (playerSprites.Count > 0)
             {
                 playerComponents[0].PlayerSprite = playerSprites[0];

@@ -42,6 +42,11 @@ public class PlayerController : MonoBehaviour
     {
         GameManager.instance.RegisterPlayer(this);
     }
+
+    public void OnPlayerJoined(PlayerType playerType)
+    {
+        Debug.LogError("VAR");
+    }
     
     private void FixedUpdate() {
         dashDurationTimer -= Time.deltaTime;
@@ -60,6 +65,11 @@ public class PlayerController : MonoBehaviour
             return;
         }
         _type = type;
+    }
+
+    public void SetPlayerPosition(Vector2 position)
+    {
+        transform.position = position;
     }
 
     public void SetPlayerComponent(PlayerComponentScriptableObject playerComponent)
