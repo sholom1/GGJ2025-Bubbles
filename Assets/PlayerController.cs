@@ -137,6 +137,7 @@ public class PlayerController : MonoBehaviour
         if (value.isPressed && CanJump())
         {
             Jump();
+            CinematicOpenerController.instance?.SkipScene();
         }
     } 
 

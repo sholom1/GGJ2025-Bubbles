@@ -109,10 +109,23 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        var cinematicOpener = CinematicOpenerController.instance;
+        if (cinematicOpener != null) {
+            cinematicOpener.OnCinematicOver.AddListener(StartNewRound);
+            cinematicOpener.StartCinematic();
+        } else {
+            Debug.Log("No cinematic opener detected, just starting the round");
+            StartNewRound();
+        }
+    }
+
+    public void StartNewRound()
+    {
         collectedHearts = 0;
         canBubblePop = false;
         Debug.Log("Game Start");
-        for(int i = 0; i < players.Count; i++) {
+        for (int i = 0; i < players.Count; i++)
+        {
             var player = players[i];
             if (player.attributeController != null)
             {
@@ -120,7 +133,7 @@ public class GameManager : MonoBehaviour
                 player.ApplyPerks();
             }
         }
-        
+
         if (timer != null)
         {
             timer.gameObject.SetActive(true);
@@ -130,7 +143,7 @@ public class GameManager : MonoBehaviour
                 GameOver(winner);
             });
         }
-        
+
         isRoundActive = true;
         if (joinScreen != null)
         {
@@ -187,7 +200,7 @@ public class GameManager : MonoBehaviour
     public void GiveWinnerAPerk(Perk perk) {
         if (_winner != null) {
             _winner.AddPerk(perk);
-            StartGame();
+            StartNewRound();
         }
     }
 }
