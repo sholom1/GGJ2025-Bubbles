@@ -14,6 +14,7 @@ public class Timer : MonoBehaviour
     [SerializeField]
     private float pulseThreshold;
     public UnityEvent OnEnd;
+    public UnityEvent OnPulse;
     private float timeRemaining;
 
     private void Start()
@@ -42,6 +43,7 @@ public class Timer : MonoBehaviour
 
     public void TickTimerAnim(AnimationEvent animationEvent)
     {
+        OnPulse.Invoke();
         timeRemaining = Mathf.Max(0, timeRemaining - 1);
     }
 
