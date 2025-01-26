@@ -5,5 +5,6 @@ public enum ItemType
     Gum,
     SpeedBoost,
     Fan,
-    PowerUp
+    PowerUp,
+    Soap
 }
