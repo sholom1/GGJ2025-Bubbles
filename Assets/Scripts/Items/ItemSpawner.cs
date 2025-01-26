@@ -65,7 +65,9 @@ public class ItemSpawner : MonoBehaviour
         var itemPrefab = ItemDatabase.Instance.GetItemPrefab(itemType);
         if (itemPrefab != null)
         {
-            var item = Instantiate(itemPrefab, position, Quaternion.identity);
+            // Ensure Z position is always 0
+            Vector3 spawnPosition = new Vector3(position.x, position.y, 0f);
+            var item = Instantiate(itemPrefab, spawnPosition, Quaternion.identity);
             var itemComponent = item.GetComponent<Item>();
             if (itemComponent != null)
             {
