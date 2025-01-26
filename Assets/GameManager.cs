@@ -136,7 +136,7 @@ public class GameManager : MonoBehaviour
             if (player.attributeController != null)
             {
                 player.attributeController.ResetAllAttributes();
-                player.ApplyPerks();
+                // player.ApplyPerks();
             }
         }
 
@@ -165,8 +165,13 @@ public class GameManager : MonoBehaviour
 
     public void GameOver(PlayerController winner)
     {
+        if (_winner != null){
+            return;
+        }
         _winner = winner;
         isRoundActive = false;
+        timer.gameObject.SetActive(false);
+
         if (PerkManager.instance != null)
         {
             PerkManager.instance.LoadPerks(winner);
