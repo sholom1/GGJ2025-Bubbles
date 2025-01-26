@@ -69,6 +69,9 @@ public class PlayerAttributeController
     
     public void ResetAllAttributes()
     {
+        if (_playerComponent == null) {
+            return;
+        }
         MoveSpeed = _playerComponent.MovementSpeed;
         JumpForce = _playerComponent.JumpForce;
         JumpFrequency = _playerComponent.JumpFrequency;
