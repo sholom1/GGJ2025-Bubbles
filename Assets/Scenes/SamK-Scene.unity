@@ -2161,6 +2161,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CinematicOpener
       objectReference: {fileID: 0}
+    - target: {fileID: 7710741988683270372, guid: 866174d86c26745d1a0fa8f0cb498d29, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
