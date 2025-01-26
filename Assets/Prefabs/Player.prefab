@@ -264,15 +264,10 @@ MonoBehaviour:
   renderer: {fileID: 2001226435017034775}
   playerInput: {fileID: 8939170092722960000}
   groundCheck: {fileID: 1200205705440526519}
-  enemyCheck: {fileID: 5854456057318070123}
   groundCheckDistance: 0.15
-  enemyCheckDistance: 1.3
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!114 &6804498445044295721
 MonoBehaviour:
   m_ObjectHideFlags: 0

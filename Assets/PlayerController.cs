@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void PlayerMovement() {
-        if (IsDashing()) {
+        if (IsDashing() || attributeController == null) {
             return;
         }
         rb.linearVelocity = new Vector2(
