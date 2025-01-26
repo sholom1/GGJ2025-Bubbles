@@ -1,8 +1,5 @@
-using System;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.PlayerLoop;
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,8 +17,6 @@ public class PlayerController : MonoBehaviour
     protected float dashSpeed = 10;
     protected float dashCooldown = 2f;
     
-    protected float gravity = 9.81f;
-
     protected Rigidbody2D rb;
 
 
@@ -72,6 +67,11 @@ public class PlayerController : MonoBehaviour
 
     public void SetPlayerComponent(PlayerComponentScriptableObject playerComponent)
     {
+        if (playerComponent != null)
+        {
+            return;
+        }
+        
         _playerComponent = playerComponent;
         
         moveSpeed = _playerComponent.MovementSpeed;
@@ -79,14 +79,8 @@ public class PlayerController : MonoBehaviour
         jumpFrequency = _playerComponent.JumpFrequency;
         dashSpeed = _playerComponent.DashSpeed;
         dashCooldown = _playerComponent.DashCooldown;
-        gravity = _playerComponent.Gravity;
         dashDuration = _playerComponent.DashDuration;
-        
-        if (_type != PlayerType.Unassigned)
-        {
-            Debug.LogError($"Player is already assigned to {_type}");
-            return;
-        }
+        rb.gravityScale = _playerComponent.GravityScale;
 
         renderer.sprite = playerComponent.PlayerSprite;
     }

@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public enum PlayerType
@@ -25,5 +24,5 @@ public class PlayerComponentScriptableObject : ScriptableObject
     public float DashCooldown = 2f;
     public float DashDuration = 0.2f;
     
-    public float Gravity = 9.81f;
+    public float GravityScale = 1f;
 }
