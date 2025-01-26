@@ -109,6 +109,8 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        players.ForEach(player => player.gameObject.SetActive(false));
+        joinScreen.SetActive(false);
         var cinematicOpener = CinematicOpenerController.instance;
         if (cinematicOpener != null) {
             cinematicOpener.OnCinematicOver.AddListener(StartNewRound);
@@ -121,6 +123,7 @@ public class GameManager : MonoBehaviour
 
     public void StartNewRound()
     {
+        players.ForEach(player => player.gameObject.SetActive(true));
         collectedHearts = 0;
         canBubblePop = false;
         Debug.Log("Game Start");
