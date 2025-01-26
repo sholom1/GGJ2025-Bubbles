@@ -162,6 +162,26 @@ public class PlayerController : MonoBehaviour
         _perks.ForEach(perk => perk.Action(this));
     }
 
+        public virtual void OnAllHeartsCollected()
+    {
+        if (_type == PlayerType.Bubble)
+        {
+            // Change bubble appearance or behavior when all hearts are collected
+            // This could be overridden in a derived class if needed
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (_type != PlayerType.Bubble) return;
+
+        PlayerController otherPlayer = collision.gameObject.GetComponent<PlayerController>();
+        if (otherPlayer != null && otherPlayer.GetPlayerType() == PlayerType.Urchin)
+        {
+            GameManager.instance.BubbleReachedUrchin();
+        }
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(

@@ -4,9 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Heart Collection")]
+    [SerializeField] private int requiredHearts = 4;
+    public UnityEvent<int> onHeartCollected;
+    public UnityEvent onAllHeartsCollected;
+
+    private int collectedHearts;
+    private bool canBubblePop;
+
+    public bool CanBubblePop => canBubblePop;
+    public int CollectedHearts => collectedHearts;
+
     [Header("Player Management")]
     [SerializeField] private List<PlayerController> players = new List<PlayerController>();
     [SerializeField] private List<PlayerComponentScriptableObject> playerComponents = new List<PlayerComponentScriptableObject>();
@@ -63,6 +75,8 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        collectedHearts = 0;
+        canBubblePop = false;
         Debug.Log("Game Start");
         for(int i = 0; i < players.Count; i++) {
             var player = players[i];
@@ -95,9 +109,28 @@ public class GameManager : MonoBehaviour
         // SceneManager.LoadScene(0);
     }
 
+    public void CollectHeart()
+    {
+        if (!isRoundActive || canBubblePop) return;
+
+        collectedHearts++;
+        onHeartCollected?.Invoke(collectedHearts);
+
+        if (collectedHearts >= requiredHearts)
+        {
+            canBubblePop = true;
+            onAllHeartsCollected?.Invoke();
+            var bubblePlayer = players.Find(player => player.GetPlayerType() == PlayerType.Bubble);
+            if (bubblePlayer != null)
+            {
+                bubblePlayer.OnAllHeartsCollected();
+            }
+        }
+    }
+
     public void BubbleReachedUrchin()
     {
-        if (isRoundActive)
+        if (isRoundActive && canBubblePop)
         {
             isRoundActive = false;
             // Handle bubble victory logic here
