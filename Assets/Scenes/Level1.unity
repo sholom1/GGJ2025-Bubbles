@@ -230,6 +230,8 @@ MonoBehaviour:
   itemPrefabs:
   - itemType: 1
     prefab: {fileID: 8399519925023229008, guid: b3434476f1b1848dbb25b8bc6023ddd8, type: 3}
+  - itemType: 5
+    prefab: {fileID: 2172836486807371250, guid: 3b3d80506ee6a4456aebd5ced8ce97ec, type: 3}
 --- !u!4 &448598015
 Transform:
   m_ObjectHideFlags: 0
@@ -289,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d67890123abcdef4567890123abcdef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleItems: 01000000
+  possibleItems: 0100000005000000
 --- !u!1 &937924288
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,7 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d67890123abcdef4567890123abcdef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleItems: 01000000
+  possibleItems: 0100000005000000
 --- !u!1 &1058909927
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,7 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d67890123abcdef4567890123abcdef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleItems: 01000000
+  possibleItems: 0100000005000000
 --- !u!1 &1171764518
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,7 +776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialSpawnDelay: 2
-  spawnInterval: 7
+  maxSpawnDelay: 7
   minSpawnDelay: 2
   itemLifetime: 5
   itemFlickerDuration: 2
@@ -841,7 +843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d67890123abcdef4567890123abcdef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleItems: 01000000
+  possibleItems: 0100000005000000
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
