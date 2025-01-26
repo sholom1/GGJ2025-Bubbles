@@ -15,6 +15,6 @@ MonoBehaviour:
   itemType: 6
   itemName: Soap
   description: Makes the floor slippery
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 2749352931902247497, guid: a25059df950ec40a4a9798e69cccec40, type: 3}
   effectDuration: 3
   destroyOnPickup: 1
