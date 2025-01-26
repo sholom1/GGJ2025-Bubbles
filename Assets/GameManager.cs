@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
             GameOver(winner);
         });
         isRoundActive = true;
-        players.ForEach(player => player.GetComponent<HeartBeatRumble>().enabled = true);
+        //players.ForEach(player => player.GetComponent<HeartBeatRumble>().enabled = true);
         Destroy(joinScreen);
     }
 

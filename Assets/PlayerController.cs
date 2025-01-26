@@ -9,14 +9,6 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private PlayerInput playerInput;
-
-    protected float moveSpeed = 5;
-
-    public float jumpForce = 5;
-    protected int jumpFrequency = 1;
-
-    protected float dashSpeed = 10;
-    protected float dashCooldown = 2f;
     
     protected Rigidbody2D rb;
 
@@ -31,11 +23,10 @@ public class PlayerController : MonoBehaviour
     protected LayerMask groundLayer;
 
     private PlayerType _type = PlayerType.Unassigned;
-
-    private PlayerComponentScriptableObject _playerComponent;
+    
+    private PlayerAttributeController _attributeController;
     private int currentJumpCount = 0;
     private float dashDurationTimer;
-    private float dashDuration;
     private float lastDashTime;
 
     private List<Perk> _perks = new List<Perk>();
@@ -73,20 +64,14 @@ public class PlayerController : MonoBehaviour
 
     public void SetPlayerComponent(PlayerComponentScriptableObject playerComponent)
     {
-        if (playerComponent != null)
+        if (playerComponent == null)
         {
             return;
         }
+
+        _attributeController = new PlayerAttributeController(playerComponent);
         
-        _playerComponent = playerComponent;
-        
-        moveSpeed = _playerComponent.MovementSpeed;
-        jumpForce = _playerComponent.JumpForce;
-        jumpFrequency = _playerComponent.JumpFrequency;
-        dashSpeed = _playerComponent.DashSpeed;
-        dashCooldown = _playerComponent.DashCooldown;
-        dashDuration = _playerComponent.DashDuration;
-        rb.gravityScale = _playerComponent.GravityScale;
+        rb.gravityScale = playerComponent.GravityScale;
 
         renderer.sprite = playerComponent.PlayerSprite;
     }
@@ -107,7 +92,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
         rb.linearVelocity = new Vector2(
-            _inputValues.x * moveSpeed,
+            _inputValues.x * _attributeController.MoveSpeed,
             rb.linearVelocityY
         );
     }
@@ -119,14 +104,14 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        if(Time.time - lastDashTime < dashCooldown) {
+        if(Time.time - lastDashTime < _attributeController.DashCooldown) {
             return;
         }
 
-        dashDurationTimer = dashDuration;
+        dashDurationTimer = _attributeController.DashDuration;
         lastDashTime = Time.time;
         rb.linearVelocity = new Vector2(
-            _inputValues.x * dashSpeed,
+            _inputValues.x * _attributeController.DashSpeed,
             rb.linearVelocityY
         );
     }
@@ -137,8 +122,10 @@ public class PlayerController : MonoBehaviour
             currentJumpCount = 0;
             return true;
         }
-
-        if (currentJumpCount < _playerComponent.JumpFrequency) {
+        if (_attributeController == null) {
+            return false;
+        }
+        if (currentJumpCount < _attributeController.JumpFrequency) {
             return true;
         }
 
@@ -156,7 +143,7 @@ public class PlayerController : MonoBehaviour
     private void Jump() {
         rb.linearVelocity = new Vector2(
             rb.linearVelocityX,
-            jumpForce
+            _attributeController.JumpForce
         );
 
         currentJumpCount++;
@@ -181,5 +168,11 @@ public class PlayerController : MonoBehaviour
             groundCheck.position,
             new Vector3(groundCheck.position.x, groundCheck.position.y - groundCheckDistance)
         );
+    }
+
+    [ContextMenu("Reset Attributes To Default")]
+    public void ResetAllAttributes()
+    {
+        _attributeController.ResetAllAttributes();
     }
 }
