@@ -13,10 +13,18 @@ MonoBehaviour:
   m_Name: Player1Component
   m_EditorClassIdentifier: 
   playerType: 1
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  EnemyLayer:
+    serializedVersion: 2
+    m_Bits: 256
   MovementSpeed: 10
   JumpForce: 5
   JumpFrequency: 1
   DashSpeed: 20
   DashCooldown: 2
   DashDuration: 0.2
-  Gravity: 9.8
+  StunForce: 5
+  StunCooldown: 1
+  GravityScale: 1

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public enum PlayerType
 {
@@ -13,6 +14,9 @@ public class PlayerComponentScriptableObject : ScriptableObject
     public Sprite PlayerSprite { get; set; }
 
     public PlayerType playerType;
+
+    public LayerMask PlayerLayer;
+    public LayerMask EnemyLayer;
     
     public float MovementSpeed = 5f;
     
@@ -22,6 +26,9 @@ public class PlayerComponentScriptableObject : ScriptableObject
     public float DashSpeed = 10f;
     public float DashCooldown = 3f;
     public float DashDuration = 0.2f;
+    
+    public float StunForce = 5f;
+    public float StunCooldown = 3f;
     
     public float GravityScale = 1f;
     
@@ -33,6 +40,8 @@ public class PlayerComponentScriptableObject : ScriptableObject
         DashSpeed = 10f;
         DashCooldown = 3f;
         DashDuration = 0.2f;
+        StunForce = 5f;
+        StunCooldown = 3f;
         GravityScale = 1f;
     }
 }

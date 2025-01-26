@@ -9,7 +9,10 @@ public class PlayerAttributeController
     public float DashCooldown { get; private set; }
     public float DashDuration { get; private set; }
 
-    public float GravityScale { get; set; }
+    public float StunForce { get; private set; }
+    public float StunCooldown { get; private set; }
+    
+    public float GravityScale { get; private set; }
 
     public PlayerAttributeController(PlayerComponentScriptableObject playerComponent)
     {
@@ -19,6 +22,8 @@ public class PlayerAttributeController
         DashSpeed = playerComponent.DashSpeed;
         DashCooldown = playerComponent.DashCooldown;
         DashDuration = playerComponent.DashDuration;
+        StunForce = playerComponent.StunForce;
+        StunCooldown = playerComponent.StunCooldown;
     }
     
     public void SetMovementSpeed(float multiplier)
@@ -64,6 +69,8 @@ public class PlayerAttributeController
         DashSpeed = 10f;
         DashCooldown = 3f;
         DashDuration = 0.2f;
+        StunForce = 5f;
+        StunCooldown = 3f;
         GravityScale = 1f;
     }
 }
