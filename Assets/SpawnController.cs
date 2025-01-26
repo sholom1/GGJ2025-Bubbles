@@ -3,10 +3,15 @@ using UnityEngine;
 
 public class SpawnController : MonoBehaviour
 {
-    [SerializeField] private List<Vector2> spawnPoints;
+    [SerializeField] private List<Transform> spawnPoints;
 
     private void Awake()
     {
+        if (spawnPoints.Count <= 0)
+        {
+            return;
+        }
+        
         ShuffleList(spawnPoints);
     }
 
@@ -18,12 +23,12 @@ public class SpawnController : MonoBehaviour
             return spawnPoint;
         }
         
-        Vector2 random = spawnPoints[Random.Range(0, spawnPoints.Count)];
+        Transform random = spawnPoints[Random.Range(0, spawnPoints.Count)];
         spawnPoints.Remove(random);
-        return random;
+        return random.position;
     }
     
-    void ShuffleList(List<Vector2> list)
+    void ShuffleList(List<Transform> list)
     {
         System.Random rng = new System.Random();
         int n = list.Count;
