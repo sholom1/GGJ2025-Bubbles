@@ -5,11 +5,14 @@ public class BubbleController : MonoBehaviour
 {
     [Header("Visual Feedback")]
     [SerializeField] private Color normalColor = Color.white;
-    [SerializeField] private Color readyToPopColor = new Color(1f, 0.5f, 0.5f, 1f); // Light pink
+    [SerializeField] private Color readyToPopColor = new Color(1f, 0.5f, 0.5f, 1f);
     [SerializeField] private GameObject heartIndicator;
+    [SerializeField] private VictoryArrow victoryArrow;
+    [SerializeField] private PulseEffect pulseEffect;
     
     private SpriteRenderer spriteRenderer;
     private string urchinTag = "Player";
+    private PlayerController urchinController;
 
     private void Awake()
     {
@@ -18,6 +21,14 @@ public class BubbleController : MonoBehaviour
         {
             heartIndicator.SetActive(false);
         }
+        if (pulseEffect != null)
+        {
+            pulseEffect.enabled = false;
+        }
+        if (victoryArrow != null)
+        {
+            victoryArrow.gameObject.SetActive(false);
+        }
     }
 
     private void Start()
@@ -25,15 +36,42 @@ public class BubbleController : MonoBehaviour
         if (GameManager.instance != null)
         {
             GameManager.instance.onAllHeartsCollected.AddListener(OnReadyToPop);
+            
+            // Find the urchin player
+            var players = FindObjectsOfType<PlayerController>();
+            foreach (var player in players)
+            {
+                if (player.GetPlayerType() == PlayerType.Urchin)
+                {
+                    urchinController = player;
+                    if (pulseEffect != null)
+                    {
+                        pulseEffect.SetTarget(player.transform);
+                    }
+                    break;
+                }
+            }
         }
     }
 
     private void OnReadyToPop()
     {
         spriteRenderer.color = readyToPopColor;
+        
         if (heartIndicator != null)
         {
             heartIndicator.SetActive(true);
+        }
+
+        if (pulseEffect != null)
+        {
+            pulseEffect.enabled = true;
+        }
+
+        if (victoryArrow != null && urchinController != null)
+        {
+            victoryArrow.gameObject.SetActive(true);
+            victoryArrow.StartPointingAt(urchinController.transform);
         }
     }
 
