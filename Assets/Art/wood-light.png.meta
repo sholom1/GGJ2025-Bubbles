@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      wood-light_0: 3509489849130907294
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
