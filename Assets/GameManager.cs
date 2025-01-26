@@ -42,29 +42,63 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Duplicate game manager detected!");
         }
         instance = this;
+        
+        // Initialize lists if they're null
+        if (playerComponents == null)
+            playerComponents = new List<PlayerComponentScriptableObject>();
+        if (playerSprites == null)
+            playerSprites = new List<Sprite>();
     }
 
     public void RegisterPlayer(PlayerController player)
     {
+        if (player == null) return;
+        
+        // Safety check for component lists
+        if (playerComponents.Count < 2)
+        {
+            Debug.LogError("Player components not set up in GameManager! Please assign Player1Component and Player2Component in the inspector.");
+            return;
+        }
+
         players.Add(player);
         if (players.Count == 1)
         {
             player.SetPlayerType(PlayerType.Bubble);
-            playerComponents[0].PlayerSprite = playerSprites[0];
-            player.SetPlayerComponent(playerComponents.Count > 0 ? playerComponents[0] : dummyPlayerComponent);
+            if (playerSprites.Count > 0)
+            {
+                playerComponents[0].PlayerSprite = playerSprites[0];
+            }
+            player.SetPlayerComponent(playerComponents[0]);
             player.name = "Player 1";
-            player1JoinScreen.UpdateJoinText();
+            if (player1JoinScreen != null)
+            {
+                player1JoinScreen.UpdateJoinText();
+            }
         }
-        else
+        else if (players.Count == 2)
         {
             player.SetPlayerType(PlayerType.Urchin);
-            playerComponents[1].PlayerSprite = playerSprites[1];
-            player.SetPlayerComponent(playerComponents.Count > 1 ? playerComponents[1] : dummyPlayerComponent);
+            if (playerSprites.Count > 1)
+            {
+                playerComponents[1].PlayerSprite = playerSprites[1];
+            }
+            player.SetPlayerComponent(playerComponents[1]);
             player.name = "Player 2";
-            player2JoinScreen.UpdateJoinText();
-            startButton.interactable = true;
-            startButton.GetComponentInChildren<TextMeshProUGUI>().text = "P1 Start";
-            EventSystem.current.SetSelectedGameObject(startButton.gameObject);
+            if (player2JoinScreen != null)
+            {
+                player2JoinScreen.UpdateJoinText();
+            }
+            if (startButton != null)
+            {
+                startButton.interactable = true;
+                TextMeshProUGUI buttonText = startButton.GetComponentInChildren<TextMeshProUGUI>();
+                if (buttonText != null)
+                {
+                    buttonText.text = "P1 Start";
+                }
+                EventSystem.current.SetSelectedGameObject(startButton.gameObject);
+            }
         }
     }
 
@@ -80,19 +114,28 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Start");
         for(int i = 0; i < players.Count; i++) {
             var player = players[i];
-            player.attributeController.ResetAllAttributes();
-            player.ApplyPerks();
+            if (player.attributeController != null)
+            {
+                player.attributeController.ResetAllAttributes();
+                player.ApplyPerks();
+            }
         }
         
-        timer.gameObject.SetActive(true);
-        timer.OnEnd.AddListener(() =>
+        if (timer != null)
         {
-            var winner = players.Find(player => player.GetPlayerType() == PlayerType.Urchin);
-            GameOver(winner);
-        });
+            timer.gameObject.SetActive(true);
+            timer.OnEnd.AddListener(() =>
+            {
+                var winner = players.Find(player => player.GetPlayerType() == PlayerType.Urchin);
+                GameOver(winner);
+            });
+        }
+        
         isRoundActive = true;
-        //players.ForEach(player => player.GetComponent<HeartBeatRumble>().enabled = true);
-        Destroy(joinScreen);
+        if (joinScreen != null)
+        {
+            Destroy(joinScreen);
+        }
     }
 
     public void ModifyRoundTime(float timeChange)
@@ -105,8 +148,10 @@ public class GameManager : MonoBehaviour
     {
         _winner = winner;
         isRoundActive = false;
-        PerkManager.instance.LoadPerks(winner);
-        // SceneManager.LoadScene(0);
+        if (PerkManager.instance != null)
+        {
+            PerkManager.instance.LoadPerks(winner);
+        }
     }
 
     public void CollectHeart()
@@ -133,7 +178,6 @@ public class GameManager : MonoBehaviour
         if (isRoundActive && canBubblePop)
         {
             isRoundActive = false;
-            // Handle bubble victory logic here
             Debug.Log("Bubble wins!");
             var winner = players.Find(player => player.GetPlayerType() == PlayerType.Bubble);
             GameOver(winner);
