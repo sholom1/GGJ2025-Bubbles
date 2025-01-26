@@ -194,7 +194,7 @@ public class GameManager : MonoBehaviour
 
     public void BubbleReachedUrchin()
     {
-        if (isRoundActive && canBubblePop)
+        if (isRoundActive/* && canBubblePop*/)
         {
             isRoundActive = false;
             Debug.Log("Bubble wins!");
