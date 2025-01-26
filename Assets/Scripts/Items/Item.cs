@@ -6,7 +6,7 @@ using System.Collections;
 public class Item : MonoBehaviour
 {
     [Header("Item Configuration")]
-    [SerializeField] private ItemData itemData;
+    [SerializeField] protected ItemData itemData;
     
     [Header("Events")]
     public UnityEvent<GameObject, GameObject> onPickupByBubble;
@@ -19,7 +19,7 @@ public class Item : MonoBehaviour
     private float flickerDuration;
     private bool isFlickering;
     
-    private void Awake()
+    protected virtual void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         InitializeItem();
@@ -35,7 +35,14 @@ public class Item : MonoBehaviour
 
     private void InitializeItem()
     {
-        spriteRenderer.sprite = itemData.itemSprite;
+        if (itemData != null && itemData.itemSprite != null)
+        {
+            spriteRenderer.sprite = itemData.itemSprite;
+        }
+        else
+        {
+            Debug.LogWarning($"Item {gameObject.name} is missing ItemData or sprite reference!");
+        }
     }
 
     private IEnumerator LifetimeRoutine()
