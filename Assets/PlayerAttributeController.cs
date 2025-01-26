@@ -1,29 +1,35 @@
+using UnityEngine;
+
+[System.Serializable]
 public class PlayerAttributeController
 {
+    [SerializeField]
     public float MoveSpeed { get; private set; }
 
+[SerializeField]
     public float JumpForce { get; private set; }
+    [SerializeField]
     public int JumpFrequency { get; private set; }
 
+[SerializeField]
     public float DashSpeed { get; private set; }
+    [SerializeField]
     public float DashCooldown { get; private set; }
+    [SerializeField]
     public float DashDuration { get; private set; }
-
+[SerializeField]
     public float StunForce { get; private set; }
+    [SerializeField]
     public float StunCooldown { get; private set; }
-    
+    [SerializeField]
     public float GravityScale { get; private set; }
+
+    private PlayerComponentScriptableObject _playerComponent;
 
     public PlayerAttributeController(PlayerComponentScriptableObject playerComponent)
     {
-        MoveSpeed = playerComponent.MovementSpeed;
-        JumpForce = playerComponent.JumpForce;
-        JumpFrequency = playerComponent.JumpFrequency;
-        DashSpeed = playerComponent.DashSpeed;
-        DashCooldown = playerComponent.DashCooldown;
-        DashDuration = playerComponent.DashDuration;
-        StunForce = playerComponent.StunForce;
-        StunCooldown = playerComponent.StunCooldown;
+        _playerComponent = playerComponent;
+
     }
     
     public void SetMovementSpeed(float multiplier)
@@ -63,14 +69,16 @@ public class PlayerAttributeController
     
     public void ResetAllAttributes()
     {
-        MoveSpeed = 5f;
-        JumpForce = 5f;
-        JumpFrequency = 1;
-        DashSpeed = 10f;
-        DashCooldown = 3f;
-        DashDuration = 0.2f;
-        StunForce = 5f;
-        StunCooldown = 3f;
-        GravityScale = 1f;
+        if (_playerComponent == null) {
+            return;
+        }
+        MoveSpeed = _playerComponent.MovementSpeed;
+        JumpForce = _playerComponent.JumpForce;
+        JumpFrequency = _playerComponent.JumpFrequency;
+        DashSpeed = _playerComponent.DashSpeed;
+        DashCooldown = _playerComponent.DashCooldown;
+        DashDuration = _playerComponent.DashDuration;
+        StunForce = _playerComponent.StunForce;
+        StunCooldown = _playerComponent.StunCooldown;
     }
 }
