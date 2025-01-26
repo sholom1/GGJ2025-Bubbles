@@ -4,5 +4,6 @@ public enum ItemType
     Clock,
     Gum,
     SpeedBoost,
-    Fan
+    Fan,
+    PowerUp
 }
