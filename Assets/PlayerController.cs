@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,28 +15,21 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     protected Transform groundCheck;
-    [SerializeField]
-    protected Transform enemyCheck;
 
     [SerializeField]
     protected float groundCheckDistance;
-    [SerializeField]
-    protected float enemyCheckDistance;
-    
+
     [SerializeField]
     protected LayerMask groundLayer;
-    [SerializeField]
-    protected LayerMask enemyLayer;
 
     private PlayerType _type = PlayerType.Unassigned;
     
-    private PlayerAttributeController _attributeController;
+    public  PlayerAttributeController attributeController;
     private int currentJumpCount = 0;
     private float dashDurationTimer;
     private float lastDashTime;
-    private float lastStunTime;
-    private bool isPushed = false;
 
+    private List<Perk> _perks = new List<Perk>();
 
     private Vector2 _inputValues;
 
@@ -52,6 +46,10 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate() {
         dashDurationTimer -= Time.deltaTime;
         PlayerMovement();
+    }
+
+    public PlayerType GetPlayerType() {
+        return _type;
     }
 
     public void SetPlayerType(PlayerType type)
@@ -71,12 +69,8 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        _attributeController = new PlayerAttributeController(playerComponent);
-
-        gameObject.layer = LayerMask.NameToLayer(_type == PlayerType.Bubble ? "Bubble" : "Urchin");
-
-        enemyLayer = playerComponent.EnemyLayer;
-
+        attributeController = new PlayerAttributeController(playerComponent);
+        
         rb.gravityScale = playerComponent.GravityScale;
 
         renderer.sprite = playerComponent.PlayerSprite;
@@ -85,6 +79,10 @@ public class PlayerController : MonoBehaviour
     public virtual void OnMove(InputValue value)
     {
         var inputValues = value.Get<Vector2>();
+        if (inputValues == null)
+        {
+            return;
+        }
 
         _inputValues = inputValues;
     }
@@ -94,7 +92,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
         rb.linearVelocity = new Vector2(
-            _inputValues.x * _attributeController.MoveSpeed,
+            _inputValues.x * attributeController.MoveSpeed,
             rb.linearVelocityY
         );
     }
@@ -106,14 +104,14 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        if(Time.time - lastDashTime < _attributeController.DashCooldown) {
+        if(Time.time - lastDashTime < attributeController.DashCooldown) {
             return;
         }
 
-        dashDurationTimer = _attributeController.DashDuration;
+        dashDurationTimer = attributeController.DashDuration;
         lastDashTime = Time.time;
         rb.linearVelocity = new Vector2(
-            _inputValues.x * _attributeController.DashSpeed,
+            _inputValues.x * attributeController.DashSpeed,
             rb.linearVelocityY
         );
     }
@@ -124,8 +122,10 @@ public class PlayerController : MonoBehaviour
             currentJumpCount = 0;
             return true;
         }
-
-        if (currentJumpCount < _attributeController.JumpFrequency) {
+        if (attributeController == null) {
+            return false;
+        }
+        if (currentJumpCount < attributeController.JumpFrequency) {
             return true;
         }
 
@@ -143,53 +143,24 @@ public class PlayerController : MonoBehaviour
     private void Jump() {
         rb.linearVelocity = new Vector2(
             rb.linearVelocityX,
-            _attributeController.JumpForce
+            attributeController.JumpForce
         );
 
         currentJumpCount++;
     }
 
-    void OnAttack(InputValue value)
-    {
-        if(Time.time - lastStunTime < _attributeController.StunCooldown) {
-            return;
-        }
-        lastStunTime = Time.time;
-        
-        if (value.isPressed && IsEnemyDetected())
-        {
-            Push();
-        }
-    }
-
-    public void Push()
-    {
-        Debug.LogError($"pushed {_type}");
-    }
-    
-    public virtual bool IsEnemyDetected()
-    {
-        RaycastHit2D hit = Physics2D.Raycast(enemyCheck.position, Vector2.left, enemyCheckDistance, enemyLayer);
-    
-        if (hit)
-        {
-            PlayerController detectedController = hit.transform.GetComponent<PlayerController>();
-        
-            if (detectedController != null && detectedController != this)
-            {
-                Debug.LogError($"Enemy detected: {hit.transform.name}");
-                detectedController.Push();
-                return true;
-            }
-        }
-    
-        return false;
-    }
-    
     public virtual bool IsGroundDetected() =>
         Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, groundLayer);
 
     bool IsDashing() => dashDurationTimer > 0;
+
+    public void AddPerk(Perk perk) {
+        _perks.Add(perk);
+    }
+
+    public void ApplyPerks() {
+        _perks.ForEach(perk => perk.Action(this));
+    }
 
     private void OnDrawGizmos()
     {
@@ -197,16 +168,11 @@ public class PlayerController : MonoBehaviour
             groundCheck.position,
             new Vector3(groundCheck.position.x, groundCheck.position.y - groundCheckDistance)
         );
-        
-        Gizmos.DrawLine(
-            enemyCheck.position,
-            new Vector3(enemyCheck.position.x- enemyCheckDistance, enemyCheck.position.y)
-        );
     }
 
     [ContextMenu("Reset Attributes To Default")]
     public void ResetAllAttributes()
     {
-        _attributeController.ResetAllAttributes();
+        attributeController.ResetAllAttributes();
     }
 }

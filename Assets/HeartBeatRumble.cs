@@ -24,6 +24,8 @@ public class HeartBeatRumble : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (gamepad != null)
+            gamepad.SetMotorSpeeds(0, 0);
         StopAllCoroutines();
     }
 
@@ -47,8 +49,12 @@ public class HeartBeatRumble : MonoBehaviour
             Debug.Log(relativeDistance);
             gamepad.SetMotorSpeeds(relativeDistance, 0);
             Debug.Log($"BPM: {Mathf.Lerp(BPMRest, BPMPeak, relativeDistance)}");
-            yield return new WaitForSeconds(Mathf.Lerp(BPMRest, BPMPeak, relativeDistance) / 60);
+            yield return new WaitForSeconds(Mathf.Lerp(BPMRest, BPMPeak, relativeDistance) / 120);
+            gamepad.SetMotorSpeeds(0, 0);
+            yield return new WaitForSeconds(Mathf.Lerp(BPMRest, BPMPeak, relativeDistance) / 120);
             gamepad.SetMotorSpeeds(0, relativeDistance);
+            yield return new WaitForSeconds(Mathf.Lerp(BPMRest, BPMPeak, relativeDistance) / 120);
+            gamepad.SetMotorSpeeds(0, 0);
         }
     }
 }
